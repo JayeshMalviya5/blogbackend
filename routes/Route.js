@@ -27,7 +27,6 @@ router.post(
 router.get(
   "/getblogs",
   verifyUser,
-  express.static("uploads"),
   userControllers.getAllBlogs
 );
 router.put("/blogs/:id/like", verifyUser, userControllers.handleLike);

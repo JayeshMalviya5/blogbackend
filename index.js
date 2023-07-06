@@ -26,7 +26,8 @@ app.use(bodyParser.json());
 
 app.use(limit)
 
-app.use("/", express.static("uploads"), routes);
+app.use('/',routes)
+app.use("/images", express.static(__dirname + "/uploads"));
 
 app.listen(8000, () => {
   console.log(`Server was connected on PORT ${PORT}`)
